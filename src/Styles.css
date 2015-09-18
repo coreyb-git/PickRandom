@@ -1,0 +1,30 @@
+header,
+footer {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.Section {
+  background-color: lightgray;
+  margin: 20px;
+  padding: 20px;
+
+  border-bottom: 5px solid white;
+}
+
+.StartHidden {
+  display: none;
+}
+
+#Main:target,
+#Settings:target,
+#Dev:target {
+  display: block;
+}
+
+.Contents {
+  padding: 20px;
+}

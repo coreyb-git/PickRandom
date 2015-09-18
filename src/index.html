@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pick @ Random</title>
+    <link rel="stylesheet" type="text/css" href="Styles.css">
+    <link rel="stylesheet" type="text/css" href="HMenu.css">
+    <script src="PickRandom.js"></script>
+</head>
+<body>
+  <header>Pick @ Random</header>
+
+  <div class="Section">
+      <div class="HMenu">
+          <ul>
+              <li><a href="#Main">Main</a></li>
+              <li><a href="#Settings">Settings</a></li>
+              <li><a href="#Dev">Dev</a></li>
+          </ul>
+      </div>
+
+      <div class="Lists">
+          <p>
+              List:
+              <select onchange="SelectedChanged()" id="SelectList">
+              </select>
+          </p>
+      </div>
+
+  </div>
+
+  <div id="Main" class="Section StartHidden">
+      <h2>Main</h2>
+      <p>
+          <input type="button" value="Pick @ Random" />
+          <span id="RandomResult"></span>
+      </p>
+  </div>
+
+  <div id="Settings" class="Section StartHidden">
+      <h2>Settings</h2>
+      <h3>Lists</h3>
+      <p>
+          <input type="text" id="NewListName" />
+          <input onclick="AddNewList();" type="button" value="Add New List" />
+      </p>
+      <p>
+          <input onclick="DeleteList()" type="button" value="Delete Current List" />
+      </p>
+      <hr />
+      <h3>Items</h3>
+      <p>
+          <input type="text" id="NewListItem" />
+          <input onclick="AddNewListItem();" type="button" value="Add New Item" />
+      </p>
+      <hr />
+      <p>
+          Items In This List: <select id="ListItems"></select>
+      </p>
+      <p>
+          <input onclick="DeleteListItem()" type="button" value="Delete Selected Item From List" />
+      </p>
+  </div>
+
+  <div id="Dev" class="Section StartHidden">
+      <h2>Dev</h2>
+      <p>
+          <input onclick="Dev_ClearLocalStore()" type="button" value="Clear LocalStorage Key" />
+      </p>
+  </div>
+
+  <footer></footer>
+  <script>Do_Init()</script>
+</body>
+</html>
